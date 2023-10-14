@@ -1,8 +1,12 @@
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import './App.css'
+import Project from './pages/Project'
 
 function App() {
   return (
-    <>
+    <Router>
+      <Routes>
+      <Route exact path="/" element={<>
     <div className="desktop">
       <div className="div">
         <div className="overlap">
@@ -11,8 +15,8 @@ function App() {
             <div className="auto-layout">
               <div className="group" />
               <div className="frame-2">
-                <div className="text-wrapper">Documentation</div>
-                <div className="text-wrapper-2">API reference</div>
+                <div className="text-wrapper"><a href="#project-title">Projects</a></div>
+                <div className="text-wrapper-2"><a href="#challenge-title">Challenges</a></div>
                 <div className="text-wrapper-3">Examples</div>
               </div>
             </div>
@@ -58,6 +62,7 @@ function App() {
             <img className="SVG" alt="Svg" src="/img/svg.svg" />
           </div>
         </div>
+        <div className="project-title" id="project-title"><a href="project">Project</ a></div>
         <div className="div-card-card">
           <div className="div-roundcard">
             <div className="overlap-group-2">
@@ -105,6 +110,113 @@ function App() {
                   <div className="text-wrapper-19">Projects</div>
                 </div>
                 <div className="text-wrapper-20">15</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="div-card-card-3">
+          <div className="div-roundcard">
+            <div className="div-roundcard-8">
+              <div className="div-roundcard-9">
+                <div className="text-wrapper-21">Garden Round 1</div>
+              </div>
+              <div className="span-statuspill-2">
+                <div className="text-wrapper-22">Upcoming</div>
+              </div>
+            </div>
+            <div className="an-open-round-where-wrapper">
+              <p className="an-open-round-where">
+                An open round where builders are encouraged to propose
+                <br />
+                any idea they believe will benefit the Nouns ecosystem.
+                <br />
+                Anyone with an ETH address is welcome to propose. Once…
+              </p>
+            </div>
+          </div>
+          <div className="div-roundcard-5">
+            <div className="div-2">
+              <div className="p-roundcard-title">
+                <div className="text-wrapper-15">Awards</div>
+              </div>
+              <div className="element-ETH-wrapper">
+                <p className="element-ETH">
+                  <span className="span">5 ETH</span>
+                  <span className="text-wrapper-23"> × </span>
+                  <span className="span">2</span>
+                </p>
+              </div>
+            </div>
+            <div className="div-roundcard-6" />
+            <div className="div-3">
+              <div className="p-roundcard-title-4">
+                <div className="text-wrapper-24">Round starts</div>
+              </div>
+              <div className="p-roundcard-info-3">
+                <div className="text-wrapper-18">in 9 days</div>
+              </div>
+            </div>
+            <div className="div-roundcard-7" />
+            <div className="overlap-group-wrapper">
+              <div className="overlap-group-3">
+                <div className="p-roundcard-title-3">
+                  <div className="text-wrapper-19">Proposals</div>
+                </div>
+                <div className="text-wrapper-25">0</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="challenge-title" id="challenge-title">Challenge </div>
+        <div className="div-card-card-4">
+          <div className="div-roundcard">
+            <div className="div-roundcard-8">
+              <div className="div-roundcard-9">
+                <div className="text-wrapper-21">Garden Round 1</div>
+              </div>
+              <div className="span-statuspill-2">
+                <div className="text-wrapper-22">Upcoming</div>
+              </div>
+            </div>
+            <div className="an-open-round-where-wrapper">
+              <p className="an-open-round-where">
+                An open round where builders are encouraged to propose
+                <br />
+                any idea they believe will benefit the Nouns ecosystem.
+                <br />
+                Anyone with an ETH address is welcome to propose. Once…
+              </p>
+            </div>
+          </div>
+          <div className="div-roundcard-5">
+            <div className="div-2">
+              <div className="p-roundcard-title">
+                <div className="text-wrapper-15">Awards</div>
+              </div>
+              <div className="element-ETH-wrapper">
+                <p className="element-ETH">
+                  <span className="span">5 ETH</span>
+                  <span className="text-wrapper-23"> × </span>
+                  <span className="span">2</span>
+                </p>
+              </div>
+            </div>
+            <div className="div-roundcard-6" />
+            <div className="div-3">
+              <div className="p-roundcard-title-4">
+                <div className="text-wrapper-24">Round starts</div>
+              </div>
+              <div className="p-roundcard-info-3">
+                <div className="text-wrapper-18">in 9 days</div>
+              </div>
+            </div>
+            <div className="div-roundcard-7" />
+            <div className="overlap-group-wrapper">
+              <div className="overlap-group-3">
+                <div className="p-roundcard-title-3">
+                  <div className="text-wrapper-19">Proposals</div>
+                </div>
+                <div className="text-wrapper-25">0</div>
               </div>
             </div>
           </div>
@@ -211,7 +323,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="div-card-card-3">
+        {/* <div className="div-card-card-5">
           <div className="div-roundcard">
             <div className="div-roundcard-8">
               <div className="div-roundcard-9">
@@ -263,116 +375,13 @@ function App() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="div-card-card-4">
-          <div className="div-roundcard">
-            <div className="div-roundcard-8">
-              <div className="div-roundcard-9">
-                <div className="text-wrapper-21">Garden Round 1</div>
-              </div>
-              <div className="span-statuspill-2">
-                <div className="text-wrapper-22">Upcoming</div>
-              </div>
-            </div>
-            <div className="an-open-round-where-wrapper">
-              <p className="an-open-round-where">
-                An open round where builders are encouraged to propose
-                <br />
-                any idea they believe will benefit the Nouns ecosystem.
-                <br />
-                Anyone with an ETH address is welcome to propose. Once…
-              </p>
-            </div>
-          </div>
-          <div className="div-roundcard-5">
-            <div className="div-2">
-              <div className="p-roundcard-title">
-                <div className="text-wrapper-15">Awards</div>
-              </div>
-              <div className="element-ETH-wrapper">
-                <p className="element-ETH">
-                  <span className="span">5 ETH</span>
-                  <span className="text-wrapper-23"> × </span>
-                  <span className="span">2</span>
-                </p>
-              </div>
-            </div>
-            <div className="div-roundcard-6" />
-            <div className="div-3">
-              <div className="p-roundcard-title-4">
-                <div className="text-wrapper-24">Round starts</div>
-              </div>
-              <div className="p-roundcard-info-3">
-                <div className="text-wrapper-18">in 9 days</div>
-              </div>
-            </div>
-            <div className="div-roundcard-7" />
-            <div className="overlap-group-wrapper">
-              <div className="overlap-group-3">
-                <div className="p-roundcard-title-3">
-                  <div className="text-wrapper-19">Proposals</div>
-                </div>
-                <div className="text-wrapper-25">0</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="div-card-card-5">
-          <div className="div-roundcard">
-            <div className="div-roundcard-8">
-              <div className="div-roundcard-9">
-                <div className="text-wrapper-21">Garden Round 1</div>
-              </div>
-              <div className="span-statuspill-2">
-                <div className="text-wrapper-22">Upcoming</div>
-              </div>
-            </div>
-            <div className="an-open-round-where-wrapper">
-              <p className="an-open-round-where">
-                An open round where builders are encouraged to propose
-                <br />
-                any idea they believe will benefit the Nouns ecosystem.
-                <br />
-                Anyone with an ETH address is welcome to propose. Once…
-              </p>
-            </div>
-          </div>
-          <div className="div-roundcard-5">
-            <div className="div-2">
-              <div className="p-roundcard-title">
-                <div className="text-wrapper-15">Awards</div>
-              </div>
-              <div className="element-ETH-wrapper">
-                <p className="element-ETH">
-                  <span className="span">5 ETH</span>
-                  <span className="text-wrapper-23"> × </span>
-                  <span className="span">2</span>
-                </p>
-              </div>
-            </div>
-            <div className="div-roundcard-6" />
-            <div className="div-3">
-              <div className="p-roundcard-title-4">
-                <div className="text-wrapper-24">Round starts</div>
-              </div>
-              <div className="p-roundcard-info-3">
-                <div className="text-wrapper-18">in 9 days</div>
-              </div>
-            </div>
-            <div className="div-roundcard-7" />
-            <div className="overlap-group-wrapper">
-              <div className="overlap-group-3">
-                <div className="p-roundcard-title-3">
-                  <div className="text-wrapper-19">Proposals</div>
-                </div>
-                <div className="text-wrapper-25">0</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        </div> */}
       </div>
     </div>
-    </>
+    </>}/>
+    <Route exact path="/project" element={<Project/>} />
+    </Routes>
+    </Router>
   )
 }
 

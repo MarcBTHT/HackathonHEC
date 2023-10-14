@@ -1,3 +1,24 @@
+.project-title{
+  font-family: "Figtree", Helvetica;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 1rem;
+  position: absolute;
+  top: 520px;
+  left: 100px;
+}
+.challenge-title{
+  font-family: "Figtree", Helvetica;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 1rem;
+  position: absolute;
+  top: 800px;
+  left: 100px;
+}
+
 .desktop {
   background-color: #ffffff;
   display: flex;
