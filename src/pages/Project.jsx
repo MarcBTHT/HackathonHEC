@@ -1,6 +1,27 @@
 import './App2.css'
+import { TezosToolkit } from '@taquito/taquito';
+import { TempleWallet } from '@temple-wallet/dapp';
 
 function Project() {
+  const Tezos = new TezosToolkit('https://testnet-tezos.giganode.io');
+  const wallet = new TempleWallet('MyAwesomeDapp');
+  const connectWallet = async() =>{
+    Tezos.setWalletProvider(wallet);
+    TempleWallet.isAvailable()
+    .then(() => {
+      const mywallet = new TempleWallet('MyAwesomeDapp');
+      mywallet
+        .connect('ghostnet')
+        .then(() => {
+          Tezos.setWalletProvider(mywallet);
+          return mywallet.getPKH();
+        })
+        .then((pkh) => {
+          console.log(`Your address: ${pkh}`);
+        });
+    })
+    .catch((err) => console.error(err));
+  }
   return (
     <>
     <div className="index">
@@ -123,7 +144,7 @@ function Project() {
               <div className="text-wrapper-21">will be</div>
             </div>
             <div className="text-wrapper-22">eligible for grant funding</div>
-            <button className="button">
+            <button className="button" onClick={connectWallet}>
               <div className="text-wrapper-23">Connect</div>
             </button>
           </div>
