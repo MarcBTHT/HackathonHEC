@@ -79,6 +79,7 @@ Here we will use yarn and not npm.
 	a) Install yarn via npm: npm install --global yarn
 	b) Create a new Vite project: yarn create vite my-project
 	cd my-project
+ 	d) Install dependencies: yarn
 	c) Run the project: yarn run dev
 
 #### 1) Bis) With npm:
